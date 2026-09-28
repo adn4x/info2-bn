@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <a href="{{ path('app_coaster_add') }}" class="btn btn-primary">
+        Ajouter un coaster
+    </a>
+
+    {% for coaster in coasters %}
+        <p>{{ coaster.name }}</p>
+
+        <a href="{{ path('app_coaster_edit', {'id': coaster.id}) }}" class="btn">
+            Modifier
+        </a>
+        <a href="{{ path('app_coaster_delete', {'id': coaster.id}) }}" class="btn btn-warning">
+            Supprimer
+        </a>
+    {% endfor %}
+
+    
+{% endblock %}

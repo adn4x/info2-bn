@@ -1,4 +1,13 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
+
+    {{ form_start(coasterForm) }}
+
+    {{ form_widget(coasterForm) }}
+
+    <button type="submit">Ajouter</button>
+
+    {{ form_end(coasterForm) }}
+
 {% endblock %}
